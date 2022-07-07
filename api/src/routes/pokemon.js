@@ -13,7 +13,7 @@ router.get('/', async (req,res)=>{
                 model: type
             }
         })
- 
+
         if(pokes.length>0){
             let cantPages = Math.ceil(pokes.length/20)
             let inicio = 0

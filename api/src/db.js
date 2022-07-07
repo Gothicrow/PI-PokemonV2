@@ -34,7 +34,7 @@ let db = process.env.NODE_ENV === "production" ? new Sequelize({
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
   { logging: false, native: false }
 );
- 
+
 Pokemon(db)
 Types(db)
 
