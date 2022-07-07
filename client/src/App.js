@@ -1,9 +1,11 @@
 import './App.css';
+import {Route} from 'react-router-dom'
+import Portfolio from './components/Portfolio/Portfolio';
 
 function App() {
   return (
     <div className="App">
-      <h1>Henry Pokemon</h1>
+      <Route path='/' component={Portfolio}/>
     </div>
   );
 }
