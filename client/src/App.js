@@ -1,11 +1,11 @@
 import './App.css';
 import {Route} from 'react-router-dom'
-import Portfolio from './components/Portfolio/Portfolio';
 
 function App() {
   return (
     <div className="App">
-      <Route path='/' component={Portfolio}/>
+      {/* <Route path='/' component={Portfolio}/> */}
+      <h2>Pokes</h2>
     </div>
   );
 }
