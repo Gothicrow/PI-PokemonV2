@@ -69,6 +69,7 @@ const pokeApi = async () => {
   if(cantPokes<1154){
     let pokes = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=1154')
     pokes = pokes.data.results
+
     for(let i=0;i<pokes.length;i++){
       let poke = await axios.get(pokes[i].url)
 
@@ -94,6 +95,7 @@ const pokeApi = async () => {
         await pok.addType(tipo[0].dataValues.id)
       }
     }
+    console.log('Carga completa')
   }
 }
 
