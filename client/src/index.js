@@ -7,16 +7,23 @@ import axios from 'axios';
 import {BrowserRouter} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './redux/store/store'
+import { Auth0Provider } from '@auth0/auth0-react'
 
 axios.defaults.baseURL = process.env.REACT_APP_API || "https://localhost:3001"
 
 ReactDOM.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </React.StrictMode>
+    <Auth0Provider
+      domain="dev-v9nj2mvc.us.auth0.com"
+      clientId="8akQsqYVktHgGrcLd4F8FHIB7qoMMXgY"
+      redirectUri={window.location.origin}
+    >
+      <React.StrictMode>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </React.StrictMode>
+    </Auth0Provider>
   </Provider>,
   document.getElementById('root')
 );

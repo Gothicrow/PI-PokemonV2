@@ -1,0 +1,109 @@
+.landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: black;
+}
+
+.fondo{
+    display: flex;
+    height: 100%;
+}
+
+.boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border: none;
+    border-radius: 50%;
+    border: solid black;
+    padding: 0px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 2px white;
+}
+
+.boton:hover{
+    animation: shadow 2s infinite;
+}
+
+@keyframes shadow {
+    0% {box-shadow: 0px 0px 45px 25px #2da7e8;}
+    33% {box-shadow: 0px 0px 45px 25px #fb9a23;}
+    66% {box-shadow: 0px 0px 45px 25px #3ec44a;}
+    100% {box-shadow: 0px 0px 45px 25px #2da7e8;}
+    0% {transform: rotate(0deg);}
+    40% {transform: rotate(10deg);}
+    45% {transform: rotate(-10deg);}
+    50% {transform: rotate(10deg);}
+    55% {transform: rotate(-10deg);}
+    60% {transform: rotate(10deg);}
+    65% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.rojo{
+    display: flex;
+    height: 46px;
+    width: 100px;
+    background: red;
+}
+
+.negro{
+    display: flex;
+    height: 10px;
+    width: 100px;
+    background: black;
+}
+
+.blanco{
+    display: flex;
+    height: 46px;
+    width: 100px;
+    background: white;
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: black;
+}
+
+.centro2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+}
+
+.centro3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: black;
+}
+
+.centro4{
+    display: flex;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: white;
+}
