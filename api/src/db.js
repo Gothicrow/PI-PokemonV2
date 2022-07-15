@@ -73,10 +73,12 @@ const pokeApi = async () => {
     for(let i=0;i<pokes.length;i++){
       let poke = await axios.get(pokes[i].url)
 
+      const clave = Object.keys(poke.data.sprites.other)
+
       let pok = await pokemon.create({
         id: poke.data.id,
         name: poke.data.name,
-        image: poke.data.sprites.other.dream_world.front_default,
+        image: poke.data.sprites.other.dream_world.front_default ? poke.data.sprites.other.dream_world.front_default : poke.data.sprites.other[clave[2]].front_default,
         hp: poke.data.stats[0].base_stat,
         attack: poke.data.stats[1].base_stat,
         defense: poke.data.stats[2].base_stat,

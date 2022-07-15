@@ -1,6 +1,6 @@
 .navBar{
     height: auto;
-    width: 100vw;
+    width: 100%;
     height: 100px;
     box-shadow: white 0px 0px 10px 1px;
     display: flex;
@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-between;
     position: absolute;
+    background: black;
 
 }
 
@@ -20,7 +21,7 @@
     width: 200px;
     margin-left: 40px;
     -webkit-box-reflect: below -15px linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.158));
-
+    text-decoration: none;
 }
 
 .logoh2{
@@ -180,7 +181,6 @@
 }
 
 @keyframes foto {
-    
     100% {width: 67px;height: 67px}
 }
 

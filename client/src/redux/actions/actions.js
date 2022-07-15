@@ -1,9 +1,9 @@
-import {} from './actionTypes'
-//import axios from 'axios'
+import { GET_POKEMONS } from './actionTypes'
+import axios from 'axios'
 
-/* export function getDetails(id){
+export function getPokemons(){
     return async dispatch => {
-        const details = await axios.get(`/pokemons/${id}`)
-        return dispatch({type: GET_DETAILS, payload: details.data})
+        const pokemons = await axios.get('/pokemon')
+        return dispatch({type: GET_POKEMONS, payload: pokemons.data})
     }
-} */
+}

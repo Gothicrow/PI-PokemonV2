@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import style from './NavBar.module.css'
 import { useAuth0 } from '@auth0/auth0-react'
 import { useState } from 'react'
@@ -10,9 +11,9 @@ function NavBar() {
 
     return (
         <div className={style.navBar}>
-            <div className={style.logo}>
+            <Link to='/' className={style.logo}>
                 <h2 className={style.logoh2}>Pokedex</h2><h4 className={style.logoh4}>v2.0</h4>
-            </div>
+            </Link>
             <div className={style.login}>
                 {
                 isLoading ?

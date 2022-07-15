@@ -1,15 +1,15 @@
-import {  } from "../actions/actionTypes"
+import { GET_POKEMONS } from "../actions/actionTypes"
 
 const initialState = {
-    /* pokeDetalles: [] */
+    pokemons: []
 }
 
 export default function reducer(state = initialState, {type, payload}){
     switch(type){
-        /* case GET_POKEMONS: return {
+        case GET_POKEMONS: return {
             ...state,
             pokemons: payload
-        } */
+        }
         default: return state
     }
 }

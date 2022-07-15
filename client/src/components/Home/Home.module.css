@@ -1,7 +1,15 @@
 .home{
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    background: black;
+    align-items: center;
+    background: rgb(15, 15, 15);
+    padding-top: 120px;
+}
+
+.pokes{
+    width: 97%;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }
