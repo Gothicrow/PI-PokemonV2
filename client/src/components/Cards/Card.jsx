@@ -1,11 +1,12 @@
 import React from 'react'
 import style from './Card.module.css'
+import imagen from '../Assets/pokeSvg.svg'
 
 function Card({name,image,types}) {
   return (
     <div className={style.card}>
       <h3 className={style.name}>{name}</h3>
-      <img className={style.image} src={image} alt="" />
+      <img className={style.image} src={image === null ? imagen : image} alt="" />
       {
         types.length>1 ?
         <div className={style.types}>
