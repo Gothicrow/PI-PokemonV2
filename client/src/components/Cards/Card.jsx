@@ -1,12 +1,16 @@
 import React from 'react'
 import style from './Card.module.css'
 import imagen from '../Assets/pokeSvg.svg'
+import { useState } from 'react'
 
 function Card({name,image,types}) {
+
+  const [mouse, setMouse] = useState(false)
+
   return (
-    <div className={style.card}>
+    <div className={style.card} onMouseEnter={()=>setMouse(true)} onMouseLeave={()=>setMouse(false)}>
       <h3 className={style.name}>{name}</h3>
-      <img className={style.image} src={image === null ? imagen : image} alt="" />
+      <img className={mouse ? style.imageTrue : style.imageFalse} src={image === null ? imagen : image} alt="" />
       {
         types.length>1 ?
         <div className={style.types}>

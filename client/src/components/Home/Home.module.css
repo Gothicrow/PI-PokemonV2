@@ -1,5 +1,6 @@
 .home{
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,5 +12,25 @@
     width: 97%;
     display: grid;
     position: relative;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+}
+
+.boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    z-index: 3;
+    top: 15%;
+    right: 22%;
+    background: rgb(70, 70, 70);
+    border: rgb(95, 95, 95) double 4px;
+    border-radius: 5px;
+}
+
+.boton:hover{
+    cursor: pointer;
 }

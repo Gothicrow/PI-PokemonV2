@@ -1,21 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPokemons } from '../../redux/actions/actions'
+import { CLEAR_DETAILS } from '../../redux/actions/actionTypes'
 import Card from '../Cards/Card'
+import Details from '../Details/Details'
 import style from './Home.module.css'
+import {ImCross} from 'react-icons/im'
 
 function Home() {
 
   const dispatch = useDispatch()
   const [pagina, setPagina]=useState(0);
-  const [render,setRender]= useState([])
+  const [render,setRender]= useState([]);
+  const [details, setDetails] = useState(false)
+  const [id, setId] = useState()
 
   useEffect(()=>{
     dispatch(getPokemons())
   },[dispatch])
   const pokes = useSelector((state)=>state.pokemons)
 
-  console.log(pokes)
+  
 
   useEffect(() => {
     let pokeRender = []
@@ -60,14 +65,15 @@ function Home() {
     }
   },[pokes,pagina,render])
 
-  console.log(render)
-
   return (
     <div className={style.home}>
+      {
+        details ? <><Details pokeId={id}/><button className={style.boton} onClick={()=>{setDetails(false);dispatch({type: CLEAR_DETAILS, payload: {}})}}><ImCross/></button></> : <></>
+      }
         <div className={style.pokes}>
           {
             render.length>0 ?
-            render.map(p=><Card key={p.id} name={p.name} image={p.image} types={p.types} />)
+            render.map(p=><div key={p.id} onClick={()=>{setDetails(true);setId(p.id)}}><Card name={p.name} image={p.image} types={p.types}/></div>)
             :
             <h2>Cargando...</h2>
           }

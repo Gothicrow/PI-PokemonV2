@@ -1,0 +1,114 @@
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(255, 255, 255, 0.336);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.divDetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 75%;
+    width: 60%;
+    background: rgb(87, 87, 87);
+    border: double rgb(77, 77, 77) 5px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 3px rgb(170, 170, 170);
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 40%;
+}
+
+.image{
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 70%;
+    min-width: 70%;
+    margin-left: 10%;
+    filter: drop-shadow(0px 0px 15px rgb(255, 254, 206));
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90%;
+    width: 50%;
+}
+
+.arriba{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 80%;
+}
+
+.name{
+    text-transform: capitalize;
+    font-size: 60px;
+    text-shadow: 0px 0px 10px white;
+}
+
+.abajo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 80%;
+}
+
+.stats{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 40%;
+}
+
+.stats2{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 30%;
+    margin: 0px 0px 20% 20%;
+}
+
+.stat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item{
+    margin: 0px 5px;
+    font-size: 30px;
+}
+
+.item1{
+    margin: 5px 5px;
+    font-size: 20px;
+}
