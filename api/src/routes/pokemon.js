@@ -8,10 +8,12 @@ const router = Router();
 router.get('/', async (req,res)=>{
     try {
 
-        const {order1,order2} = req.query
+        const {search,order1,order2, tipo} = req.query
 
         let paginas = []
         let pokes
+
+        console.log(tipo)
 
         if(order1&&order2){
             pokes = await pokemon.findAll({
@@ -22,6 +24,14 @@ router.get('/', async (req,res)=>{
                     [order1, order2]
                 ]
             })
+        }
+
+        if(tipo){
+            pokes = pokes.filter(p=>p.types.find(t=>t.name===tipo))
+        }
+
+        if(search){
+            pokes = pokes.filter(p=>p.name.includes(search))
         }
 
         if(pokes.length>0){

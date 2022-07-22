@@ -1,3 +1,8 @@
 export const GET_POKEMONS = 'GET_POKEMONS'
 export const GET_DETAILS = 'GET_DETAILS'
 export const CLEAR_DETAILS = 'CLEAR_DETAILS'
+export const GET_TYPES = 'GET_TYPES'
+export const ORDER1 = 'ORDER1'
+export const ORDER2 = 'ORDER2'
+export const SEARCH = 'SEARCH'
+export const TIPO = 'TIPO'

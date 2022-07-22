@@ -15,12 +15,17 @@ function Home() {
   const [details, setDetails] = useState(false)
   const [id, setId] = useState()
 
-  useEffect(()=>{
-    dispatch(getPokemons())
-  },[dispatch])
-  const pokes = useSelector((state)=>state.pokemons)
+  const order1 = useSelector((state)=>state.order1)
+  const order2 = useSelector((state)=>state.order2)
+  const search = useSelector((state)=>state.search)
+  const tipo = useSelector((state)=>state.tipo)
 
-  
+  useEffect(()=>{
+    dispatch(getPokemons(search, order1, order2, tipo))
+    setTimeout(()=>setRender([]),250)
+    setTimeout(()=>setPagina(0),250)
+  },[dispatch, search, order1, order2, tipo])
+  const pokes = useSelector((state)=>state.pokemons)
 
   useEffect(() => {
     let pokeRender = []

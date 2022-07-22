@@ -245,3 +245,51 @@
 .centroTrue4Out{
     display: none;
 }
+
+
+
+.inputs{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: solid red;
+}
+
+.div1{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.div2{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.div3{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.types{
+    height: 50%;
+}
+
+.type{
+    text-transform: capitalize;
+    background: grey;
+}
