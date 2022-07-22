@@ -22,8 +22,8 @@ function Home() {
 
   useEffect(()=>{
     dispatch(getPokemons(search, order1, order2, tipo))
-    setTimeout(()=>setRender([]),500)
-    setTimeout(()=>setPagina(0),500)
+    setTimeout(()=>setRender([]),800)
+    setTimeout(()=>setPagina(0),800)
   },[dispatch, search, order1, order2, tipo])
   const pokes = useSelector((state)=>state.pokemons)
 
