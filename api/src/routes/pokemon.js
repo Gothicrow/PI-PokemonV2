@@ -58,7 +58,8 @@ router.get('/:id', async (req,res)=>{
         const {id} = req.params
 
         const poke = await pokemon.findAll({
-            where: {id: id}
+            where: {id: id},
+            include:{model:type}
         })
 
         res.send(poke[0])

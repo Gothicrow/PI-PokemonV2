@@ -80,7 +80,7 @@ function Home() {
             render.length>0 ?
             render.map(p=><div key={p.id} onClick={()=>{setDetails(true);setId(p.id)}}><Card name={p.name} image={p.image} types={p.types}/></div>)
             :
-            <h2>Cargando...</h2>
+            <h2 className={style.noPokes}>No hay ningun pokemon...</h2>
           }
         </div>
     </div>

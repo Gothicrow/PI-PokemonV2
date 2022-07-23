@@ -27,29 +27,29 @@ function NavBar() {
                 window.location.pathname === '/home' ?
                 <div className={style.inputs}>
                     <div className={style.div1}>
-                        <input type="search" placeholder='Buscar pokemon..' onChange={(e)=>dispatch({type: SEARCH, payload: e.target.value})} />
+                        <input className={style.search} type="search" placeholder='Buscar pokemon..' onChange={(e)=>dispatch({type: SEARCH, payload: e.target.value.toLowerCase()})} />
                     </div>
                     <div className={style.div2}>
-                        <select onChange={(o)=>dispatch({type: ORDER1, payload: o.target.value})}>
-                            <option value="id">Id</option>
-                            <option value="name">Name</option>
-                            <option value="attack">Attack</option>
-                            <option value="hp">Hp</option>
-                            <option value="defense">Defense</option>
-                            <option value="speed">Speed</option>
-                            <option value="height">Height</option>
-                            <option value="weight">Weight</option>
+                        <select className={style.order1} onChange={(o)=>dispatch({type: ORDER1, payload: o.target.value})}>
+                            <option className={style.option} value="id">Id</option>
+                            <option className={style.option} value="name">Name</option>
+                            <option className={style.option} value="attack">Attack</option>
+                            <option className={style.option} value="hp">Hp</option>
+                            <option className={style.option} value="defense">Defense</option>
+                            <option className={style.option} value="speed">Speed</option>
+                            <option className={style.option} value="height">Height</option>
+                            <option className={style.option} value="weight">Weight</option>
                         </select>
-                        <select onChange={(o)=>dispatch({type: ORDER2, payload: o.target.value})}>
-                            <option value="asc">Asc</option>
-                            <option value="desc">Desc</option>
+                        <select className={style.order2} onChange={(o)=>dispatch({type: ORDER2, payload: o.target.value})}>
+                            <option className={style.option} value="asc">Asc</option>
+                            <option className={style.option} value="desc">Desc</option>
                         </select>
                     </div>
                     <div className={style.div3}>
                         <select className={style.types} onChange={t=>dispatch({type: TIPO, payload: t.target.value})}>
-                            <option value="" className={style.type}>Filtrar por tipo</option>
+                            <option value="" className={style.option}>Filtrar por tipo</option>
                             {
-                                types.map(t=><option key={t.id} className={style.type}>{t.name}</option>)
+                                types.map(t=><option key={t.id} className={style.option}>{t.name}</option>)
                             }
                         </select>
                     </div>
@@ -70,7 +70,7 @@ function NavBar() {
                                 </div>
                             </div>
                         </div>
-                        <img className={boton ? style.fotoTrue : style.fotoFalse} src={user.picture} alt=''/>
+                        <img className={boton ? style.fotoTrue : style.fotoFalse} src={user.picture} alt='' referrerPolicy="no-referrer"/>
                     </button>
                 :
                     <button className={style.boton} onClick={()=>loginWithRedirect()} onMouseEnter={()=>setBoton(true)} onMouseLeave={()=>(setBoton(false))}>
