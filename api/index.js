@@ -2,8 +2,10 @@ const app = require('./src/server');
 const { db } = require('./src/db');
 const { loadDb } = require('./src/db')
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server listening on port ${process.env.PORT}`);
+const port = process.env.PORT || "8080";
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
   db.sync({ force: false}).then(() => {
     console.log('Modelos sincronizados');
   })
