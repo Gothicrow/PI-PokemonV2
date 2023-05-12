@@ -6,7 +6,7 @@ const cors = require('cors')
 const routes = require('./routes/index.js');
 
 server.use(cors());
-server.use(express.json());
+server.use(express.json()); 
 
 server.use(express.json({limit: '50mb', extended: true, parameterLimit: 50000}));
 server.use(express.urlencoded({limit: '50mb', extended: true, parameterLimit: 50000}));
