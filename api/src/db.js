@@ -45,7 +45,7 @@ const {pokemon, type} = db.models
 pokemon.belongsToMany(type, {through: 'poketypes'})
 type.belongsToMany(pokemon, {through: 'poketypes'})
 
-const types = async () => {
+/* const types = async () => {
 
     let cantTipos = await type.findAll()
 
@@ -105,7 +105,7 @@ const pokeApi = async () => {
 }
 
 setTimeout(()=>types(),1500)
-setTimeout(()=>pokeApi(),3000)
+setTimeout(()=>pokeApi(),3000) */
 
 
 module.exports = {
