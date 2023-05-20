@@ -104,8 +104,8 @@ const pokeApi = async () => {
     }
 }
 
-setTimeout(()=>types(),1500)
-setTimeout(()=>pokeApi(),3000)
+setTimeout(()=>types(),5000)
+setTimeout(()=>pokeApi(),7000)
 
 
 module.exports = {
