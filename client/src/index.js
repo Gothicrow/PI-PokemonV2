@@ -9,7 +9,7 @@ import {Provider} from 'react-redux'
 import store from './redux/store/store'
 import { Auth0Provider } from '@auth0/auth0-react'
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001"
+axios.defaults.baseURL = process.env.REACT_APP_API || "https://pokemonv2.onrender.com"
 
 ReactDOM.render(
   <Provider store={store}>

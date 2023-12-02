@@ -43,6 +43,7 @@
     min-width: 70%;
     margin-left: 10%;
     filter: drop-shadow(0px 0px 15px rgb(255, 254, 206));
+    -webkit-user-drag: none;
 }
 
 .right{

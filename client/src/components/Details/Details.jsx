@@ -74,7 +74,7 @@ function Details(pokeId) {
             <div className={style.favorites}>
               <div className={style.favsCount}>
                 <MdFavorite className={style.favText}/>
-                <h3 className={style.favText}>5</h3>
+                <h3 className={style.favText}>{'5'}</h3>
               </div>
               <div className={style.favsButton} onClick={()=>console.log('fav')}>
                 {/* <MdFavorite className={style.favText}/> */}

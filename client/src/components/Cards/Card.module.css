@@ -36,6 +36,7 @@
     height: 70%;
     max-width: 80%;
     margin: 0px;
+    -webkit-user-drag: none;
 }
 
 .imageTrue{
@@ -46,6 +47,7 @@
     max-width: 80%;
     margin: 0px;
     filter: drop-shadow(0px 0px 5px rgb(255, 254, 187));
+    -webkit-user-drag: none;
 }
 
 .types{
