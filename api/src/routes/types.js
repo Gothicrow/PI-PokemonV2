@@ -1,11 +1,10 @@
 const { Router } = require('express');
 const axios = require('axios');
-const {type} = require('../db')
+const types = require('../json/types.json')
 
 const router = Router();
 router.get('/', async (req,res)=>{
     try {
-        const types = await type.findAll()
         res.send(types)
     } catch (error) {
         console.log(error)

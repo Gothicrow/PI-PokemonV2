@@ -9,7 +9,7 @@ const {
   DB_USER, DB_PASSWORD, DB_NAME, DB_HOST, DB_DEPLOY
 } = process.env
 
-/* let db = process.env.NODE_ENV === "production" ? new Sequelize({ 
+let db = new Sequelize({ 
   database: DB_NAME,
   dialect: "postgres",
   host: DB_HOST,
@@ -22,15 +22,15 @@ const {
     idle: 10000,
   },
   dialectOptions: {
-    ssl: {
+    /* ssl: {
       require: true,
       rejectUnauthorized: false,
-    },
+    }, */
     keepAlive: true,
   },
-  ssl: true,
+  /* ssl: true */
 })
-:  */
+/*: 
 let db = new Sequelize(
   DB_DEPLOY,
   {
@@ -42,7 +42,7 @@ let db = new Sequelize(
       },
     }
   }
-);
+);*/
 
 Pokemon(db)
 Types(db)
@@ -113,7 +113,7 @@ const pokeApi = async () => {
   }
 }
 
-/*  setTimeout(()=>types(),5000)
+/* setTimeout(()=>types(),5000)
 setTimeout(()=>pokeApi(),7000) */
 
 
